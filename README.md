@@ -9,3 +9,5 @@ Our goal is to create a predictive model which predicts post Tags based on Body 
 It might be easy to imagine how this model should work in the stackoverflow.com web site — the user types a question and the web size automatically gives tags suggestion.
 
 Assume that we need as many correct tags as possible and that the user would remove the unnecessary tags. Because of this assumption we are choosing recall as a high priority target for our model.
+
+To simplify our the first Apache Spark problem and reduce the amount of code, let’s simplify our problem. Instead of training a multi-label classifier, let’s train a simple binary classifier for a given tag. For instance, for the tag “Java” one classifier will be created which can predict a post that is about the Java language.
