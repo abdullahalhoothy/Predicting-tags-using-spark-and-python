@@ -11,3 +11,26 @@ It might be easy to imagine how this model should work in the stackoverflow.com 
 Assume that we need as many correct tags as possible and that the user would remove the unnecessary tags. Because of this assumption we are choosing recall as a high priority target for our model.
 
 To simplify our the first Apache Spark problem and reduce the amount of code, let’s simplify our problem. Instead of training a multi-label classifier, let’s train a simple binary classifier for a given tag. For instance, for the tag “Java” one classifier will be created which can predict a post that is about the Java language.
+
+## About the Data
+the XML has Roottag <row> and Attributes(
+	Id=intger
+	PostTypeId=intger
+	AcceptedAnswerId=intger 
+	CreationDate=Timestamp
+	Score=intger
+	ViewCount=intger
+	Body= String
+	OwnerUserId= intger 
+	LastEditorUserId=integer
+	LastEditorDisplayName=String
+	LastEditDate=Timestamp 
+	LastActivityDate=Timestamp
+	Title=string 
+	Tags= &lt;Tag&gt;
+	AnswerCount= integer
+	CommentCount=integer 
+	FavoriteCount=integer 
+	CommunityOwnedDate= Timestamp)
+
+	I will only make use of Id, Body, Title and tags.   
